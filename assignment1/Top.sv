@@ -23,7 +23,7 @@ module Top;
   // provide stimuli
   initial begin
     i1.A <= 'h01;
-    i1.B <= 'h01;
+    i1.B <= 'h00;
 
     repeat (256) @(posedge clock) begin
       i1.B <= i1.B + 1;

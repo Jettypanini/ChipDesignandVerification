@@ -13,29 +13,19 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -voptargs="+acc" top 
-# Start time: 18:12:37 on Oct 01,2022
+# Start time: 11:48:41 on Oct 02,2022
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Error: (vopt-13130) Failed to find design unit top.
 #         Searched libraries:
 #             work
 # Optimization failed
 # Error loading design
-# End time: 18:12:38 on Oct 01,2022, Elapsed time: 0:00:01
+# End time: 11:48:42 on Oct 02,2022, Elapsed time: 0:00:01
 # Errors: 1, Warnings: 0
-vsim -voptargs=+acc work.alu
-# vsim -voptargs="+acc" work.alu 
-# Start time: 18:16:13 on Oct 01,2022
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.alu(behavioural)#1
 vsim -voptargs=+acc work.Top
-# End time: 18:16:36 on Oct 01,2022, Elapsed time: 0:00:23
-# Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.Top 
-# Start time: 18:16:36 on Oct 01,2022
-# ** Note: (vsim-3812) Design is being optimized...
+# Start time: 11:48:42 on Oct 02,2022
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
 # Loading sv_std.std
 # Loading work.Top(fast)
 # Loading work.ALU_iface(fast)
@@ -44,6 +34,10 @@ vsim -voptargs=+acc work.Top
 # Loading ieee.std_logic_1164(body)
 # Loading work.alu(behavioural)#1
 add wave -position insertpoint sim:/Top/DUT/*
-run 1000
-# End time: 18:19:50 on Oct 01,2022, Elapsed time: 0:03:14
-# Errors: 4, Warnings: 0
+run 3500
+# ** Note: $finish    : /home/jpans/assignment1/Top.sv(31)
+#    Time: 2555 ns  Iteration: 1  Instance: /Top
+# 1
+# Break in Module Top at /home/jpans/assignment1/Top.sv line 31
+# End time: 11:49:57 on Oct 02,2022, Elapsed time: 0:01:15
+# Errors: 17, Warnings: 0

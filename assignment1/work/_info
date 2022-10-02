@@ -21,10 +21,10 @@ n@_opt
 Z3 OE;O;2019.3_2;69
 R0
 T_opt1
-!s110 1664648197
-Vlk]651LYEY>lPTk>jH]j22
+!s110 1664711217
+VF12E1cL323icSm@Xm9lFW2
 04 3 4 work Top fast 0
-=1-00163eb0e495-63388404-cd4d7-15c6db
+=1-00163eb0e495-63397a31-b02ef-15d79f
 R1
 R2
 n@_opt1
@@ -43,9 +43,9 @@ VIg@cJ<kQ7n7g6FRk:BnG]0
 !s100 aO0fJ97X^cTSY[GgK0`zM1
 Z9 OE;C;2019.3_2;69
 32
-Z10 !s110 1664647827
+Z10 !s110 1664711146
 !i10b 1
-Z11 !s108 1664647827.000000
+Z11 !s108 1664711146.000000
 Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/jpans/assignment1/ALU.vhd|
 Z13 !s107 /home/jpans/assignment1/ALU.vhd|
 !i113 0
@@ -72,7 +72,7 @@ R14
 R15
 YALU_iface
 Z16 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z17 !s110 1664647828
+Z17 !s110 1664711147
 !i10b 1
 !s100 d0cJT7=8Df;<S`R:na9302
 !s11b >S0F7aE:@0F_2;^Q@1jL90
@@ -89,7 +89,7 @@ Z19 OE;L;2019.3_2;69
 r1
 !s85 0
 31
-Z20 !s108 1664647828.000000
+Z20 !s108 1664711147.000000
 !s107 /home/jpans/assignment1/ALU_iface.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/jpans/assignment1/ALU_iface.sv|
 !i113 0
@@ -100,13 +100,13 @@ vTop
 R16
 R17
 !i10b 1
-!s100 i4`9:iejoT8N2@R;lmFYF2
-!s11b oFz4g73cCGV:;ebLj`eI21
-Igm`KYI:@4n5VegBHR`P3`3
+!s100 nR2SHB@R;QA0aiVW?e[b<0
+!s11b NZ7HkPO^E^H8RJQ]=;3Si1
+I`Q3_]2I_eei4]oVZdXhfN0
 R18
 S1
 R0
-w1664645139
+w1664711143
 8/home/jpans/assignment1/Top.sv
 F/home/jpans/assignment1/Top.sv
 !i122 -1
