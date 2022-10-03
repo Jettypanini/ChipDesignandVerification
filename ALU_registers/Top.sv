@@ -22,9 +22,9 @@ module Top;
 
   // provide stimuli
   initial begin
-  instruction = ;
+  instruction = 'h00;
     repeat (256) @(posedge clock) begin
-      instruction = ;
+      instruction = instruction + 1;
     end;
     $finish;
   end
