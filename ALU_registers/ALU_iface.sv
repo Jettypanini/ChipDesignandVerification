@@ -2,11 +2,9 @@
 /***
  * The interface
  ***/
-interface ALU_iface ( input logic clock );
-  logic [7:0] A;
-  logic [7:0] B;
-  logic [3:0] flags_in;
-  logic [7:0] Z;
-  logic [3:0] flags_out;
-  logic [2:0] operation;
+interface gbprocessor_iface ( input logic clock );
+  logic reset;
+  logic [7:0] instruction;
+  logic valid;
+  logic [2*8-1:0] probe;
 endinterface
