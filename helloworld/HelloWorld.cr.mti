@@ -1,0 +1,10 @@
+/home/jpans/helloworld/HelloWorld.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/helloworld/HelloWorld.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+-- Compiling interface demo_iface
+-- Compiling module inverting_register
+-- Compiling module Top
+
+Top level modules:
+	Top
+
+} {} {}}
