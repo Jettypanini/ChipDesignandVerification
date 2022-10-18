@@ -57,7 +57,7 @@ module gbprocessor (
     /* REGISTERS */
     always_ff @(posedge clock)
     begin
-        if (reset)
+        if (!reset)
         begin
             regA = 8'h0;
             regB = 8'h1;
