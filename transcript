@@ -13,3 +13,8 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading project ALU_registers
+# Compile of gbprocessor.sv was successful.
+# Compile of ALU.vhd was successful.
+# Compile of Top.sv was successful.
+# Compile of ALU_iface.sv was successful.
+# 4 compiles, 0 failed with no errors.
