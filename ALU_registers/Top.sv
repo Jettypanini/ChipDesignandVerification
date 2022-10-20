@@ -26,21 +26,21 @@ module Top;
   i1.valid <= "0";
   i1.instruction <= 'h00;
 
-  repeat (5) begin @(posedge clk); end
+  repeat (5) begin @(posedge clock); end
 
   i1.reset <= "0";
 
-  repeat (5) begin @(posedge clk); end
+  repeat (5) begin @(posedge clock); end
 
   i1.valid <= "1";
   i1.instruction <= 'h8c;
 
-  repeat (1) begin @(posedge clk); end
+  repeat (1) begin @(posedge clock); end
 
   i1.valid <= "0";
   i1.instruction <= 'h00;
 
-  repeat (5) begin @(posedge clk); end
+  repeat (5) begin @(posedge clock); end
 
     repeat (255) @(posedge clock) begin
       i1.valid <= "1";
