@@ -22,6 +22,7 @@ module Top;
 
   // provide stimuli
   initial begin
+  i1.reset <= '0';
   i1.instruction <= 'h00;
     repeat (255) @(posedge clock) begin
       i1.instruction <= i1.instruction + 1;
