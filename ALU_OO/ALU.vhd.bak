@@ -28,7 +28,7 @@ architecture Behavioural of ALU is
 
   signal A_i, B_i, B_ii, Z_i : STD_LOGIC_VECTOR(7 downto 0);
   signal C_i : STD_LOGIC;
-  signal Zfl_i, Nfl_i, Hfl_i, Cfl_i : STD_LOGIC;
+  signal Zfl_i, Nfl_i, Hfl_i, Cfl_i : STD_LOGIC,
   signal Zfl_o, Nfl_o, Hfl_o, Cfl_o : STD_LOGIC;
   signal operation_i : STD_LOGIC_VECTOR(2 downto 0);
 
