@@ -12,9 +12,20 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# Loading project ALU_registers
-# Compile of gbprocessor.sv was successful.
+# Project file /home/jpans/ChipDesignandVerification/ALU_OO/ALU_OO.mpf was not found.
+# Unable to open project.
+# file mkdir ALU_OO
+# Loading project ALU_OO
 # Compile of ALU.vhd was successful.
-# Compile of Top.sv was successful.
 # Compile of ALU_iface.sv was successful.
+# Compile of gbprocessor.sv was successful.
+# Compile of Top.sv was successful.
 # 4 compiles, 0 failed with no errors.
+# Compile of ALU.vhd was successful.
+# Compile of ALU_iface.sv was successful.
+# Compile of gbprocessor.sv was successful.
+# Compile of Top.sv was successful.
+# Compile of driver.sv was successful.
+# Compile of environment.sv was successful.
+# Compile of monitor.sv was successful.
+# 7 compiles, 0 failed with no errors.
