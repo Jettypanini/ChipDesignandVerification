@@ -14,8 +14,12 @@ class environment;
   endfunction : new
 
   task run();
-    this.drv.run_addition();
-    this.mon.run();
+    fork
+      this.drv.run_addition();
+      this.mon.run();
+    join_any
+
+    $display("[ENV]: end of run()");
   endtask : run
 
 endclass : environment
