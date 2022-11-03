@@ -1,21 +1,6 @@
-/home/jpans/ChipDesignandVerification/ALU_OO/Top.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv
+/home/jpans/ChipDesignandVerification/ALU_OO/generator.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/generator.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling module Top
-
-Top level modules:
-	Top
-
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/ALU.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/ALU.vhd
-QuestaSim vcom 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity ALU
--- Compiling architecture Behavioural of ALU
-
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/driver.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/driver.sv
-QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling package driver_sv_unit
+-- Compiling package generator_sv_unit
 
 Top level modules:
 	--none--
@@ -27,13 +12,6 @@ QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
 Top level modules:
 	--none--
 
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/gbprocessor.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/gbprocessor.sv
-QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling module gbprocessor
-
-Top level modules:
-	gbprocessor
-
 } {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/ALU_iface.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/ALU_iface.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
 -- Compiling interface gbprocessor_iface
@@ -41,11 +19,55 @@ QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
 Top level modules:
 	--none--
 
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling package environment_sv_unit
+-- Compiling module Top
+
+Top level modules:
+	Top
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/driver.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/driver.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+-- Compiling package driver_sv_unit
 
 Top level modules:
 	--none--
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv {0 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+** Error: ** while parsing file included at /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv(2)
+** while parsing file included at generator.sv(1)
+** at transaction.sv(3): Typedef 'transaction' multiply defined.
+** Error: ** while parsing file included at /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv(3)
+** while parsing file included at driver.sv(1)
+** at transaction.sv(3): Typedef 'transaction' multiply defined.
+
+} {3.0 4.0 6.0 7.0} {}} /home/jpans/ChipDesignandVerification/ALU_OO/transaction.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/transaction.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+-- Compiling package transaction_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/gbprocessor.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/gbprocessor.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+-- Compiling module gbprocessor
+
+Top level modules:
+	gbprocessor
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/ALU.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/ALU.vhd
+QuestaSim vcom 2019.3_2 Compiler 2019.09 Sep 24 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ALU
+-- Compiling architecture Behavioural of ALU
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/scoreboard.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/scoreboard.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/checker.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/checker.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
 
 } {} {}}
