@@ -1,3 +1,4 @@
+`include "transaction.sv"
 
 class scoreboard;
 
