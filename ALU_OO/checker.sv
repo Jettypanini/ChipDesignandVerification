@@ -1,6 +1,6 @@
 `include "transaction.sv"
 
-class checker;
+class verif;
 
 
   mailbox #(transaction) gen2chk;
@@ -17,4 +17,4 @@ class checker;
 
   endtask : run
 
-endclass : checker
+endclass : verif

@@ -17,7 +17,7 @@ class environment;
   generator gen;
   driver drv;
   monitor mon;
-  checker chk;
+  verif chk;
   scoreboard scb;
 
   function new(virtual ALU_iface ifc);
