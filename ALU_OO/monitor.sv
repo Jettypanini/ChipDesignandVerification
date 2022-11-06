@@ -3,9 +3,12 @@ class monitor;
   /* Virtual interface */
   virtual gbprocessor_iface ifc;
 
+  mailbox #(transaction) mon2chk;
+
   /* Constructor */
-  function new(virtual gbprocessor_iface ifc);
+  function new(virtual gbprocessor_iface ifc, mailbox #(transaction) m2c);
     this.ifc = ifc;
+    this.mon2chk = m2c;
   endfunction : new
 
   /* run method */
@@ -30,6 +33,8 @@ class monitor;
       begin
         s = $sformatf("[%t | MON] I sampled %x (with %x)", $time, this.ifc.probe, instruction);
         $display(s);
+
+        this.mon2chk.put(this.ifc.probe);
 
         sample = 0;
       end 
