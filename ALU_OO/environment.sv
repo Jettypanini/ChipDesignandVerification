@@ -23,7 +23,7 @@ class environment;
   function new(virtual ALU_iface ifc);
     this.ifc = ifc;
 
-    this.gen2drv = new(5);
+    this.gen2drv = new(99);
     this.gen2chk = new(5);
     this.mon2chk = new(5);
     this.chk2scb = new(5);
