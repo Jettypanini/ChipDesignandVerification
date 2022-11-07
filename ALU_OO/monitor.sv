@@ -3,12 +3,12 @@
 class monitor;
 
   /* Virtual interface */
-  virtual gbprocessor_iface ifc;
+  virtual ALU_iface ifc;
 
   mailbox #(transaction) mon2chk;
 
   /* Constructor */
-  function new(virtual gbprocessor_iface ifc, mailbox #(transaction) m2c);
+  function new(virtual ALU_iface ifc, mailbox #(transaction) m2c);
     this.ifc = ifc;
     this.mon2chk = m2c;
   endfunction : new
