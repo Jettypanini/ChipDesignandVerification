@@ -10,7 +10,7 @@ class environment;
   mailbox #(transaction) gen2drv;
   mailbox #(transaction) gen2chk;
   mailbox #(reg[15:0]) mon2chk;
-  mailbox #(transaction) chk2scb;
+  mailbox #(int) chk2scb;
 
   virtual ALU_iface ifc;
 

@@ -30,6 +30,9 @@ class driver;
         this.ifc.valid <= 1'b1;
         this.ifc.instruction <= tra.instruction;
 
+        s = $sformatf("[%t | DRV] driving %s", $time, tra.toString());
+      $display(s);
+
     end /* forever */
 
     s = $sformatf("[%t | DRV] done", $time);

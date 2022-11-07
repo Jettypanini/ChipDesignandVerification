@@ -2,16 +2,16 @@
 
 class scoreboard;
 
-  mailbox #(transaction) chk2scb;
+  mailbox #(int) chk2scb;
 
-  function new(mailbox #(transaction) c2s);
+  function new(mailbox #(int) c2s);
     this.chk2scb = c2s;
   endfunction : new
 
   task run;
 
   string s;
-    transaction tra;
+    int tra;
     
     $timeformat(-9,0," ns" , 10);
 
