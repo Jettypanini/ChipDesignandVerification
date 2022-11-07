@@ -15,6 +15,11 @@ class verif;
 
   task run;
 
+  forever 
+    begin
+
+    end /* forever */
+
   endtask : run
 
 endclass : verif

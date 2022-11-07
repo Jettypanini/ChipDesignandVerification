@@ -9,7 +9,11 @@ class scoreboard;
   endfunction : new
 
   task run;
+    
+    forever 
+    begin
 
+    end /* forever */
   endtask : run
 
 endclass : scoreboard
