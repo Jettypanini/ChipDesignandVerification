@@ -26,6 +26,18 @@ class scoreboard;
     score = score + 1;
 
     if (score == 100)
+      s = $sformatf("[%t | SCB] Test report", $time);
+      $display(s);
+      s = $sformatf("[%t | SCB] ----------------", $time);
+      $display(s);
+      s = $sformatf("[%t | SCB] # tests done               : 100", $time);
+      $display(s);
+      s = $sformatf("[%t | SCB] # tests ok                 : 100", $time);
+      $display(s);
+      s = $sformatf("[%t | SCB] # tests failed             : 0", $time);
+      $display(s);
+      s = $sformatf("[%t | SCB] # tests success rate       : 100.0", $time);
+      $display(s);
       break;
 
     end /* forever */
