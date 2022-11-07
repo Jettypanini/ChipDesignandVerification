@@ -5,13 +5,12 @@ QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
 Top level modules:
 	--none--
 
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/generator.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/generator.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling package Top_sv_unit
--- Compiling module Top
+-- Compiling package generator_sv_unit
 
 Top level modules:
-	Top
+	--none--
 
 } {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/ALU.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/ALU.vhd
 QuestaSim vcom 2019.3_2 Compiler 2019.09 Sep 24 2019
@@ -21,9 +20,17 @@ QuestaSim vcom 2019.3_2 Compiler 2019.09 Sep 24 2019
 -- Compiling entity ALU
 -- Compiling architecture Behavioural of ALU
 
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/generator.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/generator.sv
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling package generator_sv_unit
+-- Compiling package Top_sv_unit
+-- Compiling module Top
+
+Top level modules:
+	Top
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/scoreboard.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/scoreboard.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+-- Compiling package scoreboard_sv_unit
 
 Top level modules:
 	--none--
@@ -42,26 +49,12 @@ QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
 Top level modules:
 	--none--
 
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/scoreboard.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/scoreboard.sv
-QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling package scoreboard_sv_unit
-
-Top level modules:
-	--none--
-
 } {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
 -- Compiling package environment_sv_unit
 
 Top level modules:
 	--none--
-
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/gbprocessor.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/gbprocessor.sv
-QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling module gbprocessor
-
-Top level modules:
-	gbprocessor
 
 } {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/checker.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/checker.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
@@ -76,5 +69,12 @@ QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
 
 Top level modules:
 	--none--
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/gbprocessor.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/gbprocessor.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+-- Compiling module gbprocessor
+
+Top level modules:
+	gbprocessor
 
 } {} {}}
