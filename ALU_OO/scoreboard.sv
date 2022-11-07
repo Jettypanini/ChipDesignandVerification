@@ -25,7 +25,7 @@ class scoreboard;
     this.chk2scb.get(tra);
     score = score + 1;
 
-    if (score == 100)
+    if (score == 100) begin
       s = $sformatf("[%t | SCB] Test report", $time);
       $display(s);
       s = $sformatf("[%t | SCB] ----------------", $time);
@@ -39,6 +39,7 @@ class scoreboard;
       s = $sformatf("[%t | SCB] # tests success rate       : 100.0", $time);
       $display(s);
       break;
+    end
 
     end /* forever */
   endtask : run
