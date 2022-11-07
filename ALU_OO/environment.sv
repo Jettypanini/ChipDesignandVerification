@@ -43,13 +43,11 @@ class environment;
     s = $sformatf("[%t | ENV] I will set up the components", $time);
     $display(s);
 
-    // this.drv.do_reset();
-
     fork
       this.drv.run_addition();
       this.mon.run();
-      //this.chk.run();
-      //this.scb.run();
+      this.chk.run();
+      this.scb.run();
       this.gen.run();
     join_any;
     disable fork;

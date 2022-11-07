@@ -12,6 +12,7 @@ class scoreboard;
 
   string s;
     int tra;
+    int score;
     
     $timeformat(-9,0," ns" , 10);
 
@@ -20,6 +21,12 @@ class scoreboard;
     
     forever 
     begin
+
+    this.chk2scb.get(tra);
+    score = score + 1;
+
+    if (score == 100)
+      break;
 
     end /* forever */
   endtask : run

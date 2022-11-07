@@ -16,7 +16,9 @@ class verif;
   task run;
 
   string s;
-    transaction tra;
+   transaction traG;
+    reg[15:0] traM;
+    int traS;
     
     $timeformat(-9,0," ns" , 10);
 
@@ -25,6 +27,14 @@ class verif;
 
   forever 
     begin
+
+    this.mon2chk.get(traM);
+    if (traM == 8'h0000;) 
+      traS = 0;
+    else 
+      traS = 1;
+
+    this.chk2scb.put(traS);
 
     end /* forever */
 
