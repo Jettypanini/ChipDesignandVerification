@@ -38,7 +38,7 @@ class scoreboard;
       $display(s);
       s = $sformatf("[%t | SCB] # tests success rate       : 100.0", $time);
       $display(s);
-      break;
+      //break;
     end
 
     end /* forever */
