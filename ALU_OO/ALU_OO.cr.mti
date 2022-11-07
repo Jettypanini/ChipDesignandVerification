@@ -20,9 +20,13 @@ QuestaSim vcom 2019.3_2 Compiler 2019.09 Sep 24 2019
 -- Compiling entity ALU
 -- Compiling architecture Behavioural of ALU
 
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+** Warning: ** while parsing file included at /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv(1)
+** while parsing file included at environment.sv(5)
+** at checker.sv(32): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 -- Compiling package Top_sv_unit
+** Warning: checker.sv(32): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 -- Compiling module Top
 
 Top level modules:
@@ -49,16 +53,21 @@ QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
 Top level modules:
 	--none--
 
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/checker.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/checker.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling package environment_sv_unit
+** Warning: /home/jpans/ChipDesignandVerification/ALU_OO/checker.sv(32): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+-- Compiling package checker_sv_unit
+** Warning: /home/jpans/ChipDesignandVerification/ALU_OO/checker.sv(32): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 
 Top level modules:
 	--none--
 
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/checker.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/checker.sv
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling package checker_sv_unit
+** Warning: ** while parsing file included at /home/jpans/ChipDesignandVerification/ALU_OO/environment.sv(5)
+** at checker.sv(32): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+-- Compiling package environment_sv_unit
+** Warning: checker.sv(32): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 
 Top level modules:
 	--none--
