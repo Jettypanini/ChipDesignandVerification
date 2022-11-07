@@ -12,7 +12,7 @@ class scoreboard;
 
   string s;
     int tra;
-    int score;
+    int score = 0;
     
     $timeformat(-9,0," ns" , 10);
 
@@ -23,7 +23,7 @@ class scoreboard;
     begin
 
     this.chk2scb.get(tra);
-    score = score + 1;
+    score = score + tra;
 
     if (score == 100) begin
       s = $sformatf("[%t | SCB] Test report", $time);

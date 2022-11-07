@@ -29,9 +29,7 @@ class verif;
     begin
 
     this.mon2chk.get(traM);
-    if (traM == 8'h0000) 
-      traS = 0;
-    else 
+    if (traM != 8'h0000) 
       traS = 1;
 
     this.chk2scb.put(traS);
