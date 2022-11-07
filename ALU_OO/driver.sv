@@ -28,7 +28,7 @@ class driver;
         @(posedge this.ifc.clock);
 
         this.ifc.valid <= 1'b1;
-        this.ifc.instruction <= tra;
+        this.ifc.instruction <= tra.instruction;
 
     end /* forever */
 
