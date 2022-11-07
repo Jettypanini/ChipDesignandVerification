@@ -1,6 +1,5 @@
 `ifndef TRANSACTION_SV
 `define TRANSACTION_SV
-`endif
 
 class transaction;
   byte instruction;
@@ -14,3 +13,5 @@ class transaction;
   endfunction : toString
 
 endclass : transaction;
+
+`endif
