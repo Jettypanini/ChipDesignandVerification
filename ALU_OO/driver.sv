@@ -18,21 +18,19 @@ class driver;
 
     s = $sformatf("[%t | DRV] I will start driving from the mailbox", $time);
     $display(s);
-    
-    forever 
-    begin
 
-      /* start with reset */
+     /* start with reset */
       this.ifc.reset <= 1'b1;
       repeat(10) @(posedge this.ifc.clock);
 
       this.ifc.reset <= 1'b0;
       repeat(10) @(posedge this.ifc.clock);
+    
+    forever 
+    begin
 
       this.ifc.valid <= 1'b0;
       this.gen2drv.get(tra);
-      s = $sformatf("[%t | DRV] received an instruction", $time);
-      $display(s);
 
       @(posedge this.ifc.clock);
 
