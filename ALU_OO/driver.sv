@@ -24,6 +24,8 @@ class driver;
 
         this.ifc.valid <= 1'b0;
         this.gen2drv.get(tra);
+        s = $sformatf("[%t | DRV] received an instruction", $time);
+        $display(s);
 
         @(posedge this.ifc.clock);
 
