@@ -1,14 +1,13 @@
-`include "transaction.sv"
 
 class monitor;
 
   /* Virtual interface */
   virtual ALU_iface ifc;
 
-  mailbox #(transaction) mon2chk;
+  mailbox #(reg[15:0]) mon2chk;
 
   /* Constructor */
-  function new(virtual ALU_iface ifc, mailbox #(transaction) m2c);
+  function new(virtual ALU_iface ifc, mailbox #(reg[15:0]) m2c);
     this.ifc = ifc;
     this.mon2chk = m2c;
   endfunction : new
