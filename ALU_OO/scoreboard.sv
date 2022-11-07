@@ -9,6 +9,14 @@ class scoreboard;
   endfunction : new
 
   task run;
+
+  string s;
+    transaction tra;
+    
+    $timeformat(-9,0," ns" , 10);
+
+    s = $sformatf("[%t | SCB] I will keep the score", $time);
+    $display(s);
     
     forever 
     begin

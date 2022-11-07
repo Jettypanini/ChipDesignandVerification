@@ -15,6 +15,14 @@ class verif;
 
   task run;
 
+  string s;
+    transaction tra;
+    
+    $timeformat(-9,0," ns" , 10);
+
+    s = $sformatf("[%t | CHK] I will check your results", $time);
+    $display(s);
+
   forever 
     begin
 
