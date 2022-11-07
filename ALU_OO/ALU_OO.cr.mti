@@ -7,6 +7,7 @@ Top level modules:
 
 } {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/Top.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+-- Compiling package Top_sv_unit
 -- Compiling module Top
 
 Top level modules:
@@ -27,16 +28,16 @@ QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
 Top level modules:
 	--none--
 
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/monitor.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/monitor.sv
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/driver.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/driver.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling package monitor_sv_unit
+-- Compiling package driver_sv_unit
 
 Top level modules:
 	--none--
 
-} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/driver.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/driver.sv
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_OO/monitor.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_OO/monitor.sv
 QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
--- Compiling package driver_sv_unit
+-- Compiling package monitor_sv_unit
 
 Top level modules:
 	--none--

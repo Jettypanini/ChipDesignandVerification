@@ -1,3 +1,4 @@
+`include "environment.sv"
 
 /***
  * Test environment
@@ -11,11 +12,12 @@ module Top;
   // instantiate an interface
   ALU_iface i1( .clock(clock) );
 
-  environment env1 = new(this.i1);
+  environment env1;
 
   // provide stimuli
   initial begin
-    this.env1.run();
+    env1 = new(i1);
+    env1.run();
   end
 
 endmodule

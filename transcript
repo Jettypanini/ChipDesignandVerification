@@ -13,27 +13,4 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading project ALU_OO
-# Compile of driver.sv was successful.
-# Compile of environment.sv failed with 1 errors.
-# Compile of monitor.sv was successful.
-# Compile of ALU.vhd was successful.
-# Compile of ALU_iface.sv was successful.
-# Compile of gbprocessor.sv was successful.
-# Compile of Top.sv was successful.
-# Compile of generator.sv was successful.
-# Compile of transaction.sv was successful.
-# Compile of checker.sv was successful.
-# Compile of scoreboard.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-# Compile of driver.sv was successful.
-# Compile of environment.sv was successful.
-# Compile of monitor.sv was successful.
-# Compile of ALU.vhd was successful.
-# Compile of ALU_iface.sv was successful.
-# Compile of gbprocessor.sv was successful.
-# Compile of Top.sv was successful.
-# Compile of generator.sv was successful.
-# Compile of transaction.sv was successful.
-# Compile of checker.sv was successful.
-# Compile of scoreboard.sv was successful.
-# 11 compiles, 0 failed with no errors.
+# Load canceled
