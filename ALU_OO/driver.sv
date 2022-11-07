@@ -32,7 +32,6 @@ class driver;
 
     end /* forever */
 
-
     s = $sformatf("[%t | DRV] done", $time);
     $display(s);
          
