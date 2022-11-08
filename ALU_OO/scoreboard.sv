@@ -28,15 +28,15 @@ class scoreboard;
       $display(s);
       s = $sformatf("[%t | SCB] ----------------", $time);
       $display(s);
-      s = $sformatf("[%t | SCB] # tests done               : 100", $time);
+      s = $sformatf("[%t | SCB] # tests done               : %s", $time, tra);
       $display(s);
-      s = $sformatf("[%t | SCB] # tests ok                 : 100", $time);
+      s = $sformatf("[%t | SCB] # tests ok                 : %s", $time, tra);
       $display(s);
       s = $sformatf("[%t | SCB] # tests failed             : 0", $time);
       $display(s);
       s = $sformatf("[%t | SCB] # tests success rate       : 100.0", $time);
       $display(s);
-      
+
   endtask : run
 
 endclass : scoreboard
