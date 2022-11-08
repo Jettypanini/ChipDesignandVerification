@@ -25,8 +25,7 @@ class verif;
     s = $sformatf("[%t | CHK] I will check your results", $time);
     $display(s);
 
-    forever 
-    begin
+    forever begin
 
     this.mon2chk.get(traM);
     if (traM != 8'h0000) 
