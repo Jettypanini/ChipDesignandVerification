@@ -30,6 +30,8 @@ class verif;
     this.mon2chk.get(traM);
     if (traM != 8'h0000) 
       traS = 1;
+    else
+      traS = 0;
 
     this.chk2scb.put(traS);
     s = $sformatf("[%t | CHK] I sent a result to the scoreboard", $time);
