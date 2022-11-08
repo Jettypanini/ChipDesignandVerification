@@ -24,6 +24,8 @@ class scoreboard;
 
     this.chk2scb.get(tra);
     score = score + tra;
+    s = $sformatf("[%t | SCB] another test received", $time);
+      $display(s);
 
     if (score == 100) begin
       s = $sformatf("[%t | SCB] Test report", $time);
