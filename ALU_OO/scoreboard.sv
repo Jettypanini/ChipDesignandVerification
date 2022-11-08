@@ -18,16 +18,12 @@ class scoreboard;
 
     s = $sformatf("[%t | SCB] I will keep the score", $time);
     $display(s);
-    
-    forever 
-    begin
 
-    this.chk2scb.get(tra);
-    score = score + tra;
-    s = $sformatf("[%t | SCB] another test received %s", $time, tra);
-      $display(s);
+    while(score < 100) begin
+      this.chk2scb.get(tra);
+      score = score + tra;
+    end
 
-    if (score == 100) begin
       s = $sformatf("[%t | SCB] Test report", $time);
       $display(s);
       s = $sformatf("[%t | SCB] ----------------", $time);
@@ -40,10 +36,7 @@ class scoreboard;
       $display(s);
       s = $sformatf("[%t | SCB] # tests success rate       : 100.0", $time);
       $display(s);
-      //break;
-    end
-
-    end /* forever */
+      
   endtask : run
 
 endclass : scoreboard
