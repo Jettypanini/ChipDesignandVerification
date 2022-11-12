@@ -112,7 +112,7 @@ program assignment3();
           cp = cp+1;
         end
       end
-      $display($sformatf("ratio: (cp vs non cp):          %d         %d", cp, 100-cp));
+      $display($sformatf("ratio: (cp vs non cp):          %d         %d", cp/10, 100-(cp/10)));
       $display("Test 4: done");
 
 
