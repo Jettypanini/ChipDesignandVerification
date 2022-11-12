@@ -19,7 +19,7 @@ class transaction;
   endfunction : toByte;
 
   constraint instructionWithA {
-    (instruction_selection inside {3'b000, 3'b001, 3'b111});
+    (instruction_selection inside {3'b000, 3'b001, 3'b100});
   }
 
   constraint cpChance20 {
@@ -82,14 +82,14 @@ program assignment3();
       for (i=0; i<100; i++) begin
         void'(tra.randomize()); 
 
-        if (tra.instruction_selection == 3'b010 && !sub) begin
-          sub = 1;
-        end
         if (sub) begin
           tra.instruction_selection = 3'b101;
           sub = 0;
           $display($sformatf("Instruction: %02x %02x %02x (%02x) <------------------- !!!", tra.instruction_type, tra.instruction_selection, tra.operand_selection, tra.toByte));
         end else begin
+          if (tra.instruction_selection == 3'b010) begin
+            sub = 1;
+          end
           $display(tra.toString);
         end
       end
@@ -112,7 +112,7 @@ program assignment3();
           cp = cp+1;
         end
       end
-      $display($sformatf("ratio: (cp vs non cp):          %02x         %02x", cp, 100-cp));
+      $display($sformatf("ratio: (cp vs non cp):          %d         %d", cp, 100-cp));
       $display("Test 4: done");
 
 
