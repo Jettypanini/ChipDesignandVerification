@@ -48,6 +48,8 @@ program assignment3();
       tra.instruction_selection.rand_mode(0);
       tra.instruction_type = 2'b10;
 
+      $display("Test 1: start");
+
       for (i=0; i<8; i++) begin
         tra.instruction_selection = i;
         for (j=0; j<100; j++) begin
@@ -55,7 +57,7 @@ program assignment3();
           $display(tra.toString);
         end
       end
-      $display("Test 1: done");
+      $display("Test 1: done \n");
 
       // Test 2
       tra.instructionWithA.constraint_mode(1);
@@ -65,11 +67,13 @@ program assignment3();
       tra.instruction_selection.rand_mode(1);
       tra.instruction_type = 2'b10;
 
+      $display("Test 2: start");
+
       for (i=0; i<100; i++) begin
         void'(tra.randomize()); 
         $display(tra.toString);
       end
-      $display("Test 2: done");
+      $display("Test 2: done \n");
 
       // Test 3
       tra.instructionWithA.constraint_mode(0);
@@ -78,6 +82,8 @@ program assignment3();
       tra.instruction_type.rand_mode(0);
       tra.instruction_selection.rand_mode(1);
       tra.instruction_type = 2'b10;
+
+      $display("Test 3: start");
 
       for (i=0; i<100; i++) begin
         void'(tra.randomize()); 
@@ -93,7 +99,7 @@ program assignment3();
           $display(tra.toString);
         end
       end
-      $display("Test 3: done");
+      $display("Test 3: done \n");
 
       // Test 4
       tra.instructionWithA.constraint_mode(0);
@@ -105,6 +111,8 @@ program assignment3();
 
       cp = 0;
 
+      $display("Test 4: start");
+
       for (i=0; i<1000; i++) begin
         void'(tra.randomize()); 
         $display(tra.toString);
@@ -113,7 +121,7 @@ program assignment3();
         end
       end
       $display($sformatf("ratio: (cp vs non cp):          %d         %d", cp/10, 100-(cp/10)));
-      $display("Test 4: done");
+      $display("Test 4: done \n");
 
 
     end
