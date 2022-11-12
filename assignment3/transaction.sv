@@ -31,15 +31,14 @@ endclass : transaction
 
 program assignment3();
     transaction tra;
+    int i;
+    int j;
+    bit sub;
+    int cp;
 
     initial
     begin
       tra = new();
-
-      int i;
-      int j;
-      bit sub;
-      int cp;
 
       // Test 1
       tra.instructionWithA.constraint_mode(0);
