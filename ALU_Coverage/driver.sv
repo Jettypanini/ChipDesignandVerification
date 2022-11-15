@@ -40,6 +40,8 @@ class driver;
       s = $sformatf("[%t | DRV] driving %s", $time, tra.toString());
       $display(s);
 
+      repeat(2) @(posedge this.ifc.clock);
+
     end /* forever */
 
     s = $sformatf("[%t | DRV] done", $time);
