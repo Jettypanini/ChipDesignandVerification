@@ -47,12 +47,12 @@ class environment;
       this.drv.run_addition();
       this.mon.run();
       this.chk.run();
-      this.scb.run(100);
+      //this.scb.run(100);
       this.gen.run();
     join_any;
     disable fork;
 
-    scb.showReport();
+    //scb.showReport();
 
     s = $sformatf("[%t | ENV]  end of run()", $time);
     $display(s);
