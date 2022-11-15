@@ -31,7 +31,7 @@ class environment;
     this.gen = new(this.gen2drv, this.gen2chk);
     this.drv = new(ifc, this.gen2drv);
     this.mon = new(ifc, this.mon2chk);
-    this.chk = new(this.gen2chk, this.mon2chk, this.chk2scb);
+    this.chk = new(this.mon2chk, this.chk2scb);
     this.scb = new(this.chk2scb);
   endfunction : new
 
