@@ -1,0 +1,72 @@
+m255
+K4
+z2
+!s11f vlog 2019.3_2 2019.09, Sep 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jpans/ChipDesignandVerification/assignment3
+T_opt
+!s110 1668248320
+VUf<GYdCl^MXQ>;GjWQC]70
+04 11 4 work assignment3 fast 0
+=1-00163eb0e495-636f7300-2f41-19cc99
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OE;O;2019.3_2;69
+R0
+4assignment3
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+DXx4 work 19 transaction_sv_unit 0 22 Rk]N=L4QCM8dDiZ4adR8o3
+Z3 !s110 1668500758
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 FhPDnR8k^lFOYBl9ZOc9f0
+I2RT=XhF><d8l52N5j7^gc1
+!s105 transaction_sv_unit
+S1
+R0
+Z4 w1668248281
+Z5 8transaction.sv
+Z6 Ftransaction.sv
+!i122 -1
+L0 32
+Z7 OE;L;2019.3_2;69
+31
+Z8 !s108 1668500758.000000
+!s107 transaction.sv|
+Z9 !s90 -sv|transaction.sv|
+!i113 0
+Z10 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Xtransaction_sv_unit
+R2
+R3
+VRk]N=L4QCM8dDiZ4adR8o3
+r1
+!s85 0
+!i10b 1
+!s100 io6IW^F;6Zm3RE9ciZN>:2
+IRk]N=L4QCM8dDiZ4adR8o3
+!i103 1
+S1
+R0
+R4
+R5
+R6
+!i122 -1
+L0 1
+R7
+31
+R8
+Z11 !s107 transaction.sv|
+R9
+!i113 0
+R10
+R1

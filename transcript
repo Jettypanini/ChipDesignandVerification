@@ -12,16 +12,17 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# Loading project ALU_OO
-# Compile of driver.sv was successful.
-# Compile of environment.sv was successful.
-# Compile of monitor.sv was successful.
+# Loading project ALU_Coverage
 # Compile of ALU.vhd was successful.
 # Compile of ALU_iface.sv was successful.
+# Compile of checker.sv was successful with warnings.
+# Compile of driver.sv was successful with warnings.
+# Compile of environment.sv was successful with warnings.
 # Compile of gbprocessor.sv was successful.
-# Compile of Top.sv was successful.
-# Compile of generator.sv was successful.
-# Compile of transaction.sv was successful.
-# Compile of checker.sv was successful.
-# Compile of scoreboard.sv was successful.
-# 11 compiles, 0 failed with no errors.
+# Compile of generator.sv was successful with warnings.
+# Compile of monitor.sv was successful with warnings.
+# Compile of scoreboard.sv was successful with warnings.
+# Compile of test.sv was successful with warnings.
+# Compile of Top.sv was successful with warnings.
+# Compile of transaction.sv was successful with warnings.
+# 12 compiles, 0 failed with no errors.

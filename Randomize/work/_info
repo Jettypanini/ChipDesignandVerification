@@ -1,0 +1,72 @@
+m255
+K4
+z2
+!s11f vlog 2019.3_2 2019.09, Sep 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jpans/ChipDesignandVerification/Randomize
+T_opt
+!s110 1668192051
+VMM`d?ANCSQ@O=XBRnfB9B1
+04 19 4 work test_random_example fast 0
+=1-00163eb0e495-636e9733-b5efe-127ac6
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OE;O;2019.3_2;69
+R0
+Xrandomisation_sv_unit
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1668192109
+VHkKW3G46T`F1l1@9NWF1f0
+r1
+!s85 0
+!i10b 1
+!s100 O7LB05ETW8NK]b[[L@ohM2
+IHkKW3G46T`F1l1@9NWF1f0
+!i103 1
+S1
+R0
+Z4 w1667914860
+Z5 8randomisation.sv
+Z6 Frandomisation.sv
+!i122 -1
+L0 1
+Z7 OE;L;2019.3_2;69
+31
+Z8 !s108 1668192109.000000
+!s107 randomisation.sv|
+Z9 !s90 -sv|randomisation.sv|
+!i113 0
+Z10 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+4test_random_example
+R2
+DXx4 work 21 randomisation_sv_unit 0 22 HkKW3G46T`F1l1@9NWF1f0
+R3
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 L4N>:`JRcZMkHETi2n4`Z3
+IQ`JOS^LXZdb9L3SVJM7mD2
+!s105 randomisation_sv_unit
+S1
+R0
+R4
+R5
+R6
+!i122 -1
+L0 22
+R7
+31
+R8
+Z11 !s107 randomisation.sv|
+R9
+!i113 0
+R10
+R1

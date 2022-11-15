@@ -1,0 +1,98 @@
+/home/jpans/ChipDesignandVerification/ALU_Coverage/gbprocessor.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/gbprocessor.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+-- Compiling module gbprocessor
+
+Top level modules:
+	gbprocessor
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_Coverage/ALU.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/ALU.vhd
+QuestaSim vcom 2019.3_2 Compiler 2019.09 Sep 24 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ALU
+-- Compiling architecture Behavioural of ALU
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_Coverage/scoreboard.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/scoreboard.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+** Warning: /home/jpans/ChipDesignandVerification/ALU_Coverage/scoreboard.sv(1): (vlog-13233) Design unit "scoreboard_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package scoreboard_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_Coverage/checker.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/checker.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+** Warning: transaction.sv(4): (vlog-13233) Design unit "checker_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package checker_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_Coverage/generator.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/generator.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+** Warning: transaction.sv(4): (vlog-13233) Design unit "generator_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package generator_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_Coverage/test.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/test.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+** Warning: transaction.sv(4): (vlog-13233) Design unit "test_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package test_sv_unit
+-- Compiling program test
+
+Top level modules:
+	test
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_Coverage/monitor.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/monitor.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+** Warning: /home/jpans/ChipDesignandVerification/ALU_Coverage/monitor.sv(2): (vlog-13233) Design unit "monitor_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package monitor_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_Coverage/ALU_iface.sv {1 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/ALU_iface.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+-- Compiling interface ALU_iface
+
+Top level modules:
+	--none--
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_Coverage/Top.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/Top.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+** Warning: transaction.sv(4): (vlog-13233) Design unit "Top_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package Top_sv_unit
+-- Compiling program test
+-- Compiling module Top
+
+Top level modules:
+	Top
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_Coverage/driver.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/driver.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+** Warning: transaction.sv(4): (vlog-13233) Design unit "driver_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package driver_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_Coverage/environment.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/environment.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+** Warning: transaction.sv(4): (vlog-13233) Design unit "environment_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package environment_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}} /home/jpans/ChipDesignandVerification/ALU_Coverage/transaction.sv {2 {vlog -work work -vopt -sv -stats=none /home/jpans/ChipDesignandVerification/ALU_Coverage/transaction.sv
+QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+** Warning: /home/jpans/ChipDesignandVerification/ALU_Coverage/transaction.sv(4): (vlog-13233) Design unit "transaction_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package transaction_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}}
