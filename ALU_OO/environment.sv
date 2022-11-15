@@ -9,8 +9,8 @@ class environment;
 
   mailbox #(transaction) gen2drv;
   mailbox #(transaction) gen2chk;
-  mailbox #(reg[15:0]) mon2chk;
-  mailbox #(int) chk2scb;
+  mailbox #(shortint) mon2chk;
+  mailbox #(bit) chk2scb;
 
   virtual ALU_iface ifc;
 
@@ -51,6 +51,8 @@ class environment;
       this.gen.run();
     join_any;
     disable fork;
+
+    scb.showReport();
 
     s = $sformatf("[%t | ENV]  end of run()", $time);
     $display(s);

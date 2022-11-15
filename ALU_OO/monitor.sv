@@ -4,10 +4,10 @@ class monitor;
   /* Virtual interface */
   virtual ALU_iface ifc;
 
-  mailbox #(reg[15:0]) mon2chk;
+  mailbox #(shortint) mon2chk;
 
   /* Constructor */
-  function new(virtual ALU_iface ifc, mailbox #(reg[15:0]) m2c);
+  function new(virtual ALU_iface ifc, mailbox #(shortint) m2c);
     this.ifc = ifc;
     this.mon2chk = m2c;
   endfunction : new
