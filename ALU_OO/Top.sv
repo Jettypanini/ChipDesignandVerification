@@ -1,4 +1,4 @@
-`include "environment.sv"
+`include "test.sv"
 
 /***
  * Test environment
@@ -20,12 +20,6 @@ module Top;
     .probe(i1.probe)
   );
 
-  environment env1;
-
-  // provide stimuli
-  initial begin
-    env1 = new(i1);
-    env1.run();
-  end
+    test test1(i1);
 
 endmodule

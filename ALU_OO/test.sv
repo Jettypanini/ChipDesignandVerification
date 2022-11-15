@@ -1,12 +1,13 @@
-`include "generator.sv"
+`include "environment.sv"
 
-program test();
+program test(ALU_iface i1);
 
-  generator gen = new();
+  environment env1;
+  env1 = new(i1);
 
-  initial
-  begin
-    gen.run();
+  // provide stimuli
+  initial begin
+    env1.run();
   end
 
 endprogram : test
