@@ -47,7 +47,7 @@ class environment;
       this.drv.run_addition();
       this.mon.run();
       this.chk.run();
-      this.scb.run();
+      this.scb.run(100);
       this.gen.run();
     join_any;
     disable fork;
