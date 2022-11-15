@@ -24,7 +24,7 @@ class environment;
     this.ifc = ifc;
 
     this.gen2drv = new(100);
-    this.gen2chk = new(100);.
+    this.gen2chk = new(100);
     this.mon2chk = new(100);
     this.chk2scb = new(100);
 
