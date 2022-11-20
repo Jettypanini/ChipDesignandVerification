@@ -28,7 +28,7 @@ module Top;
 
     cp_ALU_instruction_type: coverpoint ALU_iface.instruction[5:3]
     iff(ALU_iface.valid) {
-      bin pc = 7;
+      bin pc = {7};
     }
 
   endgroup
