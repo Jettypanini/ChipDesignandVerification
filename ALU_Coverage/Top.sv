@@ -27,7 +27,7 @@ module Top;
     option.at_least = 1000;
 
     cp_ALU_instruction_type: coverpoint ALU_iface.instruction[5:3]
-    iff(ALU_iface.valid) {
+    iff(i1.valid) {
       bins pc = {7};
     }
   endgroup
