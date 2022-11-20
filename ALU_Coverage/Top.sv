@@ -23,10 +23,12 @@ module Top;
 
   test test1(i1);
 
-  covergroup assignment4 @(posedge clock);
-    cp1000: coverpoint ALU_iface.instruction
+  covergroup cp1000 @(posedge clock);
+    option.at_least = 1000;
+
+    cp_ALU_instruction_type: coverpoint ALU_iface.instruction[5:3]
     iff(ALU_iface.valid) {
-      bin cp = 7;
+      bin pc = 7;
     }
 
   endgroup
