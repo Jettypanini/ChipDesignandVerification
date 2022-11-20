@@ -30,13 +30,6 @@ module Top;
     iff(ALU_iface.valid) {
       bins pc = {7};
     }
-
   endgroup
-
-  initial begin
-    assignment4 assignment4_inst;
-
-    assignment4_inst = new();
-  end
 
 endmodule
