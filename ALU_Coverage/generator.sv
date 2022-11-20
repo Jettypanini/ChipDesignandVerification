@@ -22,6 +22,10 @@ class generator;
     forever
     begin
       tra = new();
+      void'(tra.randomize()); 
+      tra.instruction[7:6] = tra.instruction_type;
+      tra.instruction[5:3] = tra.instruction_selection;
+      tra.instruction[2:0] = tra.operand_selection;
       s = $sformatf("[%t | GEN] new instruction %s", $time, tra.toString());
       $display(s);
       this.gen2drv.put(tra);
