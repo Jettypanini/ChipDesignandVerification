@@ -25,7 +25,7 @@ class scoreboard;
     s = $sformatf("[%t | SCB] I will start keeping score", $time);
     $display(s);
 
-    while (this.no_tests_done < this.NO_tests)
+    while ($get_coverage() < 100)
     begin
       this.chk2scb.get(result);
 

@@ -1,3 +1,4 @@
+`include "ALU_iface.sv"
 `include "test.sv"
 
 /***
@@ -20,6 +21,20 @@ module Top;
     .probe(i1.probe)
   );
 
-    test test1(i1);
+  test test1(i1);
+
+  covergroup assignment4 @(posedge clock);
+    cp1000: coverpoint ALU_iface.instruction
+    iff(ALU_iface.valid) {
+      bin cp = 7;
+    }
+
+  endgroup
+
+  initial begin
+    assignment4 assignment4_inst;
+
+    assignment4_inst = new();
+  end
 
 endmodule
