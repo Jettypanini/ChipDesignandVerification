@@ -32,4 +32,9 @@ module Top;
     }
   endgroup
 
+  initial begin
+    cp1000 cp1000_inst;
+    cp1000_inst = new();
+  end
+
 endmodule
