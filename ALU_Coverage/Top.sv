@@ -26,7 +26,7 @@ module Top;
   covergroup cp1000 @(posedge clock);
     option.at_least = 1000;
 
-    cp_ALU_instruction_type: coverpoint ALU_iface.instruction[5:3]
+    cp_ALU_instruction_type: coverpoint i1.instruction[5:3]
     iff(i1.valid) {
       bins pc = {7};
     }
