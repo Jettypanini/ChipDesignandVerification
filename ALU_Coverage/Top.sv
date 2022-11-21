@@ -23,6 +23,15 @@ module Top;
 
   test test1(i1);
 
+   covergroup sbc_xor @(posedge clock);
+    option.at_least = 100;
+
+    cp_ALU_instruction_type: coverpoint i1.instruction[5:3]
+    iff(i1.valid) {
+      bins xorAfterSbc = (3=>5);
+    }
+  endgroup
+
   covergroup cp1000 @(posedge clock);
     option.at_least = 1000;
 
@@ -32,9 +41,44 @@ module Top;
     }
   endgroup
 
+  covergroup subE @(posedge clock);
+    option.at_least = 20;
+
+    cp_ALU_instruction_type: coverpoint i1.instruction[5:3]
+    iff(i1.valid) {
+      bins subAndE = (3=>5);
+    }
+  endgroup
+
+  covergroup arith3log1 @(posedge clock);
+    cp_ALU_instruction_type: coverpoint i1.instruction[5:3]
+    iff(i1.valid) {
+      bins xorAfterSbc = (3=>5);
+    }
+  endgroup
+
+  covergroup logregA @(posedge clock);
+    option.at_least = 327;
+
+    cp_ALU_instruction_type: coverpoint i1.instruction[5:3]
+    iff(i1.valid) {
+      bins xorAfterSbc = (3=>5);
+    }
+  endgroup
+
   initial begin
+    sbc_xor sbc_xor_inst;
     cp1000 cp1000_inst;
+    subE subE_inst;
+    arith3log1 arith3log1_inst;
+    logregA logregA_inst;
+
     cp1000_inst = new();
+    sbc_xor_inst = new();
+    subE_inst = new();
+    arith3log1_inst = new();
+    logregA_inst = new();
+
   end
 
 endmodule
