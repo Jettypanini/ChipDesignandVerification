@@ -3,11 +3,9 @@
 class generator;
 
   mailbox #(transaction) gen2drv;
-  mailbox #(transaction) gen2chk;
 
-  function new(mailbox #(transaction) g2d, mailbox #(transaction) g2c);
+  function new(mailbox #(transaction) g2d);
     this.gen2drv = g2d;
-    this.gen2chk = g2c;
   endfunction : new
 
   task run;
@@ -29,7 +27,6 @@ class generator;
       s = $sformatf("[%t | GEN] new instruction %s", $time, tra.toString());
       $display(s);
       this.gen2drv.put(tra);
-      this.gen2chk.put(tra);
     end
   endtask : run
 

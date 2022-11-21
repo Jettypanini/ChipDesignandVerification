@@ -44,9 +44,9 @@ module Top;
   covergroup subE @(posedge clock);
     option.at_least = 20;
 
-    cp_ALU_instruction_type: coverpoint i1.instruction[5:3]
+    cp_ALU_instruction_type: coverpoint i1.instruction[5:0]
     iff(i1.valid) {
-      bins subAndE = (3=>5);
+      bins subAndE = {6'h011100}};
     }
   endgroup
 

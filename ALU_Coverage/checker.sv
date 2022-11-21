@@ -13,6 +13,7 @@ class verif;
 
   task run; 
     shortint expected_result, received_result;
+    transaction tra;
 
     string s;
 
