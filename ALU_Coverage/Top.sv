@@ -46,7 +46,7 @@ module Top;
 
     cp_ALU_instruction_type: coverpoint i1.instruction[5:0]
     iff(i1.valid) {
-      bins subAndE = {6'h011100}};
+      bins subAndE = {'h1D};
     }
   endgroup
 
