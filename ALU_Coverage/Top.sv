@@ -60,11 +60,11 @@ module Top;
   covergroup logregA @(posedge clock);
     option.at_least = 327;
 
-    cp_ALU_instruction_type: coverpoint gb_iface.instruction[5] iff(gb_iface.valid) {
+    cp_ALU_instruction_type: coverpoint i1.instruction[5] iff(i1.valid) {
             bins logical = {1};
         }
 
-        cp_ALU_second_operand: coverpoint gb_iface.instruction[2:0] iff(gb_iface.valid){
+        cp_ALU_second_operand: coverpoint i1.instruction[2:0] iff(i1.valid){
             bins regA = {7};
         }
 

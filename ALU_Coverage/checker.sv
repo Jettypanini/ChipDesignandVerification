@@ -2,7 +2,6 @@
 
 class verif;
 
-  mailbox #(transaction) gen2chk;
   mailbox #(shortint) mon2chk;
   mailbox #(bit) chk2scb;
 
