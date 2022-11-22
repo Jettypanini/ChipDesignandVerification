@@ -18,6 +18,10 @@ class transaction;
     return $sformatf("Instruction: %08x", this.instruction);
   endfunction : toString
 
+  constraint c1 {
+    instruction_selection[2] dist { 0 := 3, 1 := 1};
+  }
+
 endclass : transaction;
 
 `endif

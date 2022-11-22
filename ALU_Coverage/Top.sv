@@ -51,9 +51,17 @@ module Top;
   endgroup
 
   covergroup arith3log1 @(posedge clock);
-    cp_ALU_instruction_type: coverpoint i1.instruction[5:3]
+  
+    cp_ALU_instruction_type: coverpoint i1.instruction[5] iff(i1.valid) {
+      bins arithmetic = {0};
+      bins logical = {1};
+    }
+
+    option.at_least = 3*binsof(cp_ALU_instruction_type.logical);
+
+    cp_ALU_instr_type: coverpoint i1.instruction[5]
     iff(i1.valid) {
-      bins xorAfterSbc = (3=>5);
+      bins arithm = ({0});
     }
   endgroup
 
