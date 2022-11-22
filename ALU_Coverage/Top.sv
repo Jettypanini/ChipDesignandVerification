@@ -46,7 +46,7 @@ module Top;
 
     cp_ALU_instruction_type: coverpoint i1.instruction[5:0]
     iff(i1.valid) {
-      bins subAndE = {'h1D};
+      bins subAndE = {6'b011011};
     }
   endgroup
 
@@ -60,9 +60,16 @@ module Top;
   covergroup logregA @(posedge clock);
     option.at_least = 327;
 
-    cp_ALU_instruction_type: coverpoint i1.instruction[5:3]
-    iff(i1.valid) {
-      bins xorAfterSbc = (3=>5);
+    cp_ALU_instruction_type: coverpoint gb_iface.instruction[5] iff(gb_iface.valid) {
+            bins logical = {1};
+        }
+
+        cp_ALU_second_operand: coverpoint gb_iface.instruction[2:0] iff(gb_iface.valid){
+            bins regA = {7};
+        }
+
+    cx: cross cp_ALU_instruction_type, cp_ALU_second_operand {
+      bins logNotA = binsof(cp_ALU_instruction_type.logical) && !binsof(cp_ALU_second_operand.regA);
     }
   endgroup
 
