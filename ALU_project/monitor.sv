@@ -18,6 +18,7 @@ class monitor;
     byte a, b, z;
     bit sample = 0;
     byte instruction;
+    byte data;
     
     $timeformat(-9,0," ns" , 10); /* format timing */
 
@@ -32,7 +33,7 @@ class monitor;
       /* if sampling is required, sample */
       if(sample == 1)
       begin
-        s = $sformatf("[%t | MON] I sampled %x (with %x)", $time, this.ifc.probe, instruction);
+        s = $sformatf("[%t | MON] I sampled %x (with %x %x)", $time, this.ifc.probe, instruction, data);
         $display(s);
 
         this.mon2chk.put(this.ifc.probe);
@@ -45,6 +46,7 @@ class monitor;
       begin
         sample = 1;
         instruction = this.ifc.instruction;
+        data = this.ifc.data;
       end /* if valid */
         
     end /* forever */

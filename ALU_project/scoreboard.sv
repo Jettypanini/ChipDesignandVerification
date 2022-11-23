@@ -52,5 +52,4 @@ class scoreboard;
     $display("[SCB] # tests success rate : %0.2f", this.no_tests_ok/this.no_tests_done*100);
   endtask : showReport
 
-
 endclass : scoreboard

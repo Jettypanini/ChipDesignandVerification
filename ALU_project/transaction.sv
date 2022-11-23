@@ -3,6 +3,7 @@
 
 class transaction;
   byte instruction;
+  byte data;
 
   rand bit [1:0] instruction_type;
   rand bit [2:0] instruction_selection;
