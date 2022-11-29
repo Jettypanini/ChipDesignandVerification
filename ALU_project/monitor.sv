@@ -33,7 +33,7 @@ class monitor;
       /* if sampling is required, sample */
       if(sample == 1)
       begin
-        s = $sformatf("[%t | MON] I sampled %x (with %x %x)", $time, this.ifc.probe, instruction, data);
+        s = $sformatf("[%t | MON] I sampled %x (with %x %x)", $time, this.ifc.probe, instruction, data_in);
         $display(s);
 
         this.mon2chk.put(this.ifc.probe);
