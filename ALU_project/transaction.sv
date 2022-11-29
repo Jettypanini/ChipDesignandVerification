@@ -26,7 +26,7 @@ class transaction;
   endfunction : toString
 
   function string dataToString();
-    return $sformatf("Data: %08x", this.data);
+    return $sformatf("Data: %08x", this.data_in);
   endfunction : dataToString  
 
 endclass : transaction;
