@@ -19,7 +19,7 @@ class environment;
   verif chk;
   scoreboard scb;
 
-  function new(virtual ALU_iface ifc);
+  function new(virtual ALU_iface ifc, shortint gen_state, shortint drv_state, shortint mon_state);
     this.ifc = ifc;
 
     this.gen2drv = new(100);
