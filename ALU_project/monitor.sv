@@ -18,7 +18,7 @@ class monitor;
     byte a, b, z;
     bit sample = 0;
     byte instruction;
-    byte data;
+    byte data_in;
     
     $timeformat(-9,0," ns" , 10); /* format timing */
 
@@ -46,7 +46,7 @@ class monitor;
       begin
         sample = 1;
         instruction = this.ifc.instruction;
-        data = this.ifc.data;
+        data_in = this.ifc.data_in;
       end /* if valid */
         
     end /* forever */

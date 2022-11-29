@@ -36,7 +36,7 @@ class driver;
 
       this.ifc.valid <= 1'b1;
       this.ifc.instruction <= tra.instruction;
-      this.ifc.data <= tra.data;
+      this.ifc.data_in <= tra.data_in;
 
       s = $sformatf("[%t | DRV] driving %s", $time, tra.toString());
       $display(s);
