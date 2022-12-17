@@ -46,7 +46,7 @@ class gameboyprocessor;
        can be fed to the model. The model 
        performs the same operation on its 
        internal registers as the DUT. */
-    task executeALUInstruction(byte instr);
+    task executeALUInstruction();
       
         string s;
         transaction tra;
@@ -54,7 +54,7 @@ class gameboyprocessor;
         forever
         begin
 
-            this.gen2drv.get(tra);
+            this.gen2mdl.get(tra);
             s = $sformatf("[%t | MDL] received: %s", $time, tra.toString());
             $display(s);
 
