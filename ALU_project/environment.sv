@@ -9,6 +9,7 @@
 class environment;
 
   mailbox #(transaction) gen2drv;
+  mailbox #(transaction) gen2mdl;
   mailbox #(shortint) mon2chk;
   mailbox #(bit) chk2scb;
 
@@ -25,10 +26,12 @@ class environment;
     this.ifc = ifc;
 
     this.gen2drv = new(100);
+    this.gen2mdl = new(100);
     this.mon2chk = new(100);
     this.chk2scb = new(100);
 
-    this.gen = new(this.gen2drv);
+    this.gen = new(this.gen2drv, this.gen2mdl);
+    this.mdl = new(this.gen2mdl);
     this.drv = new(ifc, this.gen2drv);
     this.mon = new(ifc, this.mon2chk);
     this.chk = new(this.mon2chk, this.chk2scb);
@@ -45,7 +48,7 @@ class environment;
 
     fork
       this.drv.run_addition();
-      this.mdl.test_cpumodel();
+      this.mdl.run();
       this.mon.run();
       this.chk.run();
       this.scb.run(100);

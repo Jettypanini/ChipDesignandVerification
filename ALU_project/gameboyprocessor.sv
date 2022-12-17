@@ -11,12 +11,15 @@ class gameboyprocessor;
     byte H;
     byte L;
 
+    
+  mailbox #(transaction) gen2mdl;
+
     /* Upon creating an object, the registers
       are initialised. A simplication was done,
       because the LOAD instructions are not 
       implemented. Hence, all values are constant 
       (except for those of A and F).*/
-    function new();
+    function new(mailbox #(transaction) g2m);
         this.A = 0;
         this.B = 1;
         this.C = 2;
@@ -25,6 +28,7 @@ class gameboyprocessor;
         this.F = 0;
         this.H = 5;
         this.L = 6;
+        this.gen2mdl = g2m;
     endfunction : new
 
     /* A simple to string function to 
@@ -44,45 +48,17 @@ class gameboyprocessor;
        internal registers as the DUT. */
     task executeALUInstruction(byte instr);
       
-        /******** content should go here ********/
+        transaction tra;
+    
+        forever
+        begin
+
+            this.gen2drv.get(tra);
+            s = $sformatf("[%t | MDL] received: %s", $time, tra.toString());
+            $display(s);
+
+        end
 
     endtask : executeALUInstruction
 
 endclass : gameboyprocessor
-
-
-/* A small program to test the model */
-program test_cpumodel;
-    static gameboyprocessor gbmodel;
-
-    initial 
-    begin
-        /* instantiate model */
-        gbmodel = new();
-
-        /* show the initial values of the register file*/
-        gbmodel.toString();
-
-        /* ADC H => A = A + H + Cin => 0 + 5 + 0 = 5 = 0x5*/ 
-        $display("Executing instruction 0x8C");
-        gbmodel.executeALUInstruction(8'h8C);
-
-        /* show the final values of the register file*/
-        gbmodel.toString();
-
-
-        $display("Executing instruction 0x8C");
-        gbmodel.executeALUInstruction(8'h8C);
-        gbmodel.toString();
-
-        $display("Executing instruction 0x8C");
-        gbmodel.executeALUInstruction(8'h8C);
-        gbmodel.toString();
-
-        $display("Executing instruction 0x8C");
-        gbmodel.executeALUInstruction(8'h8C);
-        gbmodel.toString();
-
-    end
-  
-endprogram : test_cpumodel
