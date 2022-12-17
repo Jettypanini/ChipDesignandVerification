@@ -1,5 +1,6 @@
 `include "transaction.sv"
 `include "generator.sv"
+`include "gameboyprocessor.sv"
 `include "driver.sv"
 `include "monitor.sv"
 `include "checker.sv"
@@ -14,6 +15,7 @@ class environment;
   virtual ALU_iface ifc;
 
   generator gen;
+  gameboyprocessor mdl;
   driver drv;
   monitor mon;
   verif chk;
@@ -43,6 +45,7 @@ class environment;
 
     fork
       this.drv.run_addition();
+      this.mdl.test_cpumodel();
       this.mon.run();
       this.chk.run();
       this.scb.run(100);
