@@ -48,6 +48,7 @@ class gameboyprocessor;
        internal registers as the DUT. */
     task executeALUInstruction(byte instr);
       
+        string s;
         transaction tra;
     
         forever
