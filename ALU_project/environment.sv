@@ -48,7 +48,7 @@ class environment;
 
     fork
       this.drv.run_addition();
-      this.mdl.run();
+      this.mdl.executeALUInstruction();
       this.mon.run();
       this.chk.run();
       this.scb.run(100);
