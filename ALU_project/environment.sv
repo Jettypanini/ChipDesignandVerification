@@ -27,11 +27,11 @@ class environment;
   function new(virtual ALU_iface ifc, shortint gen_state, shortint drv_state, shortint mon_state);
     this.ifc = ifc;
 
-    this.gen2drv = new(100);
-    this.gen2mdl = new(100);
-    this.mdl2chk = new(100);
-    this.mon2chk = new(100);
-    this.chk2scb = new(100);
+    this.gen2drv = new(1);
+    this.gen2mdl = new(1);
+    this.mdl2chk = new(1);
+    this.mon2chk = new(1);
+    this.chk2scb = new(1);
 
     this.gen = new(this.gen2drv, this.gen2mdl);
     this.mdl = new(this.gen2mdl, this.mdl2chk);
