@@ -25,10 +25,10 @@ class tra_probe;
   endfunction : new
 
   function show();
-        $display("REG A : %02X \t\t REG F : %02X", this.A, this.F);
-        $display("REG B : %02X \t\t REG C : %02X", this.B, this.C);
-        $display("REG D : %02X \t\t REG E : %02X", this.D, this.E);
-        $display("REG H : %02X \t\t REG L : %02X", this.H, this.L);
+        $display("REG A : %02X \t\t REG F : %02X", this.regA, this.regF);
+        $display("REG B : %02X \t\t REG C : %02X", this.regB, this.regC);
+        $display("REG D : %02X \t\t REG E : %02X", this.regD, this.regE);
+        $display("REG H : %02X \t\t REG L : %02X", this.regH, this.regL);
   endfunction : show 
 
   function getProbe();
