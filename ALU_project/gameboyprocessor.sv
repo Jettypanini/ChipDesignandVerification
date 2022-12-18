@@ -11,8 +11,12 @@ class gameboyprocessor;
     byte H;
     byte L;
 
+    bit [1:0] instruction_type;
+    bit [2:0] instruction_selection;
+    bit [2:0] operand_selection;
+
     
-  mailbox #(transaction) gen2mdl;
+    mailbox #(transaction) gen2mdl;
 
     /* Upon creating an object, the registers
       are initialised. A simplication was done,
@@ -55,9 +59,17 @@ class gameboyprocessor;
         begin
 
             this.gen2mdl.get(tra);
-            s = $sformatf("[%t | MDL] received: %s", $time, tra.toString());
+            s = $sformatf("[%t | MDL] received and calculating: %s", $time, tra.toString());
             $display(s);
+            this.instruction_type = tra.instruction[7:6];
+            this.instruction_selection = tra.instruction[5:3];
+            this.operand_selection = tra.instruction[2:0];
 
+            if (this.operand_selection == 2'h10)
+            begin
+              s = $sformatf("[%t | MDL] It's logical!", $time);
+              $display(s);
+            end
         end
 
     endtask : executeALUInstruction
