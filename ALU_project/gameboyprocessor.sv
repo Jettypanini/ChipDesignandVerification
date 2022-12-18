@@ -1,4 +1,4 @@
-`include "transaction.sv"
+`include "tra_probe.sv"
 
 /* A new class is made for the model :) */
 class gameboyprocessor;
@@ -18,14 +18,14 @@ class gameboyprocessor;
     bit [2:0] operand_selection;
     
     mailbox #(transaction) gen2mdl;
-    mailbox #(shortint) mdl2chk;
+    mailbox #(tra_probe) mdl2chk;
 
     /* Upon creating an object, the registers
       are initialised. A simplication was done,
       because the LOAD instructions are not 
       implemented. Hence, all values are constant 
       (except for those of A and F).*/
-    function new(mailbox #(transaction) g2m, mailbox #(shortint) m2c);
+    function new(mailbox #(transaction) g2m, mailbox #(tra_probe) m2c);
         this.A = 0;
         this.B = 1;
         this.C = 2;
@@ -56,9 +56,10 @@ class gameboyprocessor;
     task executeALUInstruction();
         string s;
         transaction tra;
-        logic [2*8-1:0] probe;
+        tra_probe probe;
         byte val_reg;
     
+        probe = new();
         forever
         begin
 
@@ -103,8 +104,15 @@ class gameboyprocessor;
 
             end
 
-            probe[15:8] = this.A;
-            probe[7:0] = this.F;
+            probe.regA = A;
+            probe.regB = B;
+            probe.regC = C;
+            probe.regD = D;
+            probe.regE = E;
+            probe.regF = F;
+            probe.regH = H;
+            probe.regL = L;
+
             this.mdl2chk.put(probe);
         end
 

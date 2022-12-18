@@ -16,7 +16,7 @@ module gbprocessor (
     input clock,
     input [7:0] instruction,
     input valid,
-    output [2*8-1:0] probe
+    output [8*8-1:0] probe
 );
 
     logic [7:0] regA, regB, regC, regD, regE, regF, regH, regL;
@@ -28,7 +28,7 @@ module gbprocessor (
 
     assign load_regA = instruction[7] & ~instruction[6] & valid;
     assign load_regF = instruction[7] & ~instruction[6] & valid;
-    assign probe = {regA, regF};
+    assign probe = {regA, regB, regC, regD, regE, regF, regH, regL};
 
     /* second operand selector MUX */
     always_comb

@@ -1,20 +1,20 @@
-`include "transaction.sv"
+`include "tra_probe.sv"
 
 class verif;
 
-  mailbox #(shortint) mon2chk;
-  mailbox #(shortint) mdl2chk;
+  mailbox #(tra_probe) mon2chk;
+  mailbox #(tra_probe) mdl2chk;
   mailbox #(bit) chk2scb;
 
-  function new(mailbox #(shortint) m2c, mailbox #(shortint) md2c, mailbox #(bit) c2s);
+  function new(mailbox #(tra_probe) m2c, mailbox #(tra_probe) md2c, mailbox #(bit) c2s);
     this.mon2chk = m2c;
     this.mdl2chk = md2c;
     this.chk2scb = c2s;
   endfunction : new
 
   task run; 
-    shortint expected_result, received_result;
-    transaction tra;
+    tra_probe tra_mon;
+    tra_probe tra_mdl;
 
     string s;
 
@@ -24,12 +24,13 @@ class verif;
 
     forever 
     begin  
-      this.mon2chk.get(received_result);
-      this.mdl2chk.get(expected_result);
-      s = $sformatf("[%t | CHK] I received MON: %x and MDL: %x", $time, received_result, expected_result);
-      $display(s);
+      this.mon2chk.get(tra_mon);
+      this.mdl2chk.get(tra_mdl);
 
-      if (received_result == expected_result)
+      tra_mon.show();
+      tra_mdl.show();
+
+      if (tra_mon.getProbe() == tra_mdl.getProbe())
       begin
         this.chk2scb.put(bit'(1));
       end else begin

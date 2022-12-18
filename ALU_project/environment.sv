@@ -1,4 +1,5 @@
 `include "transaction.sv"
+`include "tra_probe.sv"
 `include "generator.sv"
 `include "gameboyprocessor.sv"
 `include "driver.sv"
@@ -10,8 +11,8 @@ class environment;
 
   mailbox #(transaction) gen2drv;
   mailbox #(transaction) gen2mdl;
-  mailbox #(shortint) mdl2chk;
-  mailbox #(shortint) mon2chk;
+  mailbox #(tra_probe) mdl2chk;
+  mailbox #(tra_probe) mon2chk;
   mailbox #(bit) chk2scb;
 
   virtual ALU_iface ifc;
