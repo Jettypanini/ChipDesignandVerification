@@ -10,6 +10,7 @@ class environment;
 
   mailbox #(transaction) gen2drv;
   mailbox #(transaction) gen2mdl;
+  mailbox #(shortint) mdl2chk;
   mailbox #(shortint) mon2chk;
   mailbox #(bit) chk2scb;
 
@@ -27,14 +28,15 @@ class environment;
 
     this.gen2drv = new(100);
     this.gen2mdl = new(100);
+    this.mdl2chk = new(100);
     this.mon2chk = new(100);
     this.chk2scb = new(100);
 
     this.gen = new(this.gen2drv, this.gen2mdl);
-    this.mdl = new(this.gen2mdl);
+    this.mdl = new(this.gen2mdl, this.mdl2chk);
     this.drv = new(ifc, this.gen2drv);
     this.mon = new(ifc, this.mon2chk);
-    this.chk = new(this.mon2chk, this.chk2scb);
+    this.chk = new(this.mon2chk, this.mdl2chk, this.chk2scb);
     this.scb = new(this.chk2scb);
   endfunction : new
 

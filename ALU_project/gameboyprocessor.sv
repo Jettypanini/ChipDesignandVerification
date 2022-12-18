@@ -16,16 +16,16 @@ class gameboyprocessor;
     bit [1:0] instruction_type;
     bit [2:0] instruction_selection;
     bit [2:0] operand_selection;
-
     
     mailbox #(transaction) gen2mdl;
+    mailbox #(shortint) mdl2chk;
 
     /* Upon creating an object, the registers
       are initialised. A simplication was done,
       because the LOAD instructions are not 
       implemented. Hence, all values are constant 
       (except for those of A and F).*/
-    function new(mailbox #(transaction) g2m);
+    function new(mailbox #(transaction) g2m, mailbox #(shortint) m2c);
         this.A = 0;
         this.B = 1;
         this.C = 2;
@@ -35,6 +35,7 @@ class gameboyprocessor;
         this.H = 5;
         this.L = 6;
         this.gen2mdl = g2m;
+        this.mdl2chk = m2c;
     endfunction : new
 
     /* A simple to string function to 
@@ -55,6 +56,7 @@ class gameboyprocessor;
     task executeALUInstruction();
         string s;
         transaction tra;
+        logic [2*8-1:0] probe;
     
         forever
         begin
@@ -71,6 +73,10 @@ class gameboyprocessor;
               s = $sformatf("[%t | MDL] It's logical!", $time);
               $display(s);
             end
+
+            probe[15:8] = this.A;
+            probe[7:0] = this.F;
+            this.mdl2chk.put(probe);
         end
 
     endtask : executeALUInstruction

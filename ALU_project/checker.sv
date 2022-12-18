@@ -3,6 +3,7 @@
 class verif;
 
   mailbox #(shortint) mon2chk;
+  mailbox #(shortint) mdl2chk;
   mailbox #(bit) chk2scb;
 
   function new(mailbox #(shortint) m2c, mailbox #(bit) c2s);
@@ -23,10 +24,9 @@ class verif;
     forever 
     begin  
       this.mon2chk.get(received_result);
-
-      /* do something to get the.
-         For now, have this placeholder */
-      received_result = expected_result;
+      this.mdl2chk.get(expected_result);
+       s = $sformatf("[%t | CHK] I received MON: %x and MDL: %x", $time, received_result, expected_result);
+      $display(s);
 
       if (received_result == expected_result)
       begin
