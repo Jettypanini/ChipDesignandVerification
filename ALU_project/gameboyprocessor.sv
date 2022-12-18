@@ -51,6 +51,20 @@ class gameboyprocessor;
         byte val_reg;
     
         probe = new();
+
+        probe.regA = this.A;
+        probe.regB = this.B;
+        probe.regC = this.C;
+        probe.regD = this.D;
+        probe.regE = this.E;
+        probe.regF = this.F;
+        probe.regH = this.H;
+        probe.regL = this.L;
+        
+        s = $sformatf("[%t | MDL] I start with", $time);
+        $display(s);
+        probe.show();
+
         forever
         begin
 
@@ -119,14 +133,14 @@ class gameboyprocessor;
               endcase
             end
 
-            probe.regA = A;
-            probe.regB = B;
-            probe.regC = C;
-            probe.regD = D;
-            probe.regE = E;
-            probe.regF = F;
-            probe.regH = H;
-            probe.regL = L;
+            probe.regA = this.A;
+            probe.regB = this.B;
+            probe.regC = this.C;
+            probe.regD = this.D;
+            probe.regE = this.E;
+            probe.regF = this.F;
+            probe.regH = this.H;
+            probe.regL = this.L;
 
             s = $sformatf("[%t | MDL] I calculated with %x", $time, tra.instruction);
             $display(s);
