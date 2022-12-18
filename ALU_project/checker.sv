@@ -6,7 +6,7 @@ class verif;
   mailbox #(shortint) mdl2chk;
   mailbox #(bit) chk2scb;
 
-  function new(mailbox #(shortint) m2c, mailbox #(bit) c2s);
+  function new(mailbox #(shortint) m2c, mailbox #(shortint) mdl2chk;, mailbox #(bit) c2s);
     this.mon2chk = m2c;
     this.chk2scb = c2s;
   endfunction : new
