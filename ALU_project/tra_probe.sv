@@ -15,13 +15,13 @@ class tra_probe;
 
   function new();
     this.regA = 0;
-    this.regB = 0;
-    this.regC = 0;
-    this.regD = 0;
-    this.regE = 0;
+    this.regB = 1;
+    this.regC = 2;
+    this.regD = 3;
+    this.regE = 4;
     this.regF = 0;
-    this.regH = 0;
-    this.regL = 0;
+    this.regH = 5;
+    this.regL = 6;
   endfunction : new
 
   function show();
