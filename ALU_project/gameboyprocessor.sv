@@ -57,6 +57,7 @@ class gameboyprocessor;
         string s;
         transaction tra;
         logic [2*8-1:0] probe;
+        byte val_reg;
     
         forever
         begin
@@ -68,10 +69,38 @@ class gameboyprocessor;
             this.instruction_selection = tra.instruction[5:3];
             this.operand_selection = tra.instruction[2:0];
 
-            if (this.operand_selection == 2'h10)
+            if (this.instruction_type == 2'h10)
             begin
-              s = $sformatf("[%t | MDL] It's logical!", $time);
+              case (operand_selection)
+                0 : begin
+                      val_reg = B;
+                    end
+                1 : begin
+                      val_reg = C;
+                    end
+                2 : begin
+                      val_reg = D;
+                    end
+                3 : begin
+                      val_reg = E;
+                    end
+                4 : begin
+                      val_reg = H;
+                    end
+                5 : begin
+                      val_reg = L;
+                    end
+                // Value of HL is ignored.
+                //6 : begin
+                //      val_reg = HL;
+                //    end
+                7 : begin
+                      val_reg = A;
+                    end
+              endcase
+              s = $sformatf("[%t | MDL] Value loaded: %x", $time, val_reg);
               $display(s);
+
             end
 
             probe[15:8] = this.A;
