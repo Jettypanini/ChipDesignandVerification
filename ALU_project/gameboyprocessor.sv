@@ -68,7 +68,7 @@ class gameboyprocessor;
             s = $sformatf("[%t | MDL] operand selection: %x", $time, this.operand_selection);
             $display(s);
 
-            if (this.instruction_type == 2'h10)
+            if (this.instruction_type == 2)
             begin
               case (operand_selection)
                 0 : begin
