@@ -52,19 +52,6 @@ class gameboyprocessor;
     
         probe = new();
 
-        probe.regA = this.A;
-        probe.regB = this.B;
-        probe.regC = this.C;
-        probe.regD = this.D;
-        probe.regE = this.E;
-        probe.regF = this.F;
-        probe.regH = this.H;
-        probe.regL = this.L;
-        
-        s = $sformatf("[%t | MDL] I start with", $time);
-        $display(s);
-        probe.show();
-
         forever
         begin
 
@@ -74,6 +61,12 @@ class gameboyprocessor;
             this.instruction_type = tra.instruction[7:6];
             this.instruction_selection = tra.instruction[5:3];
             this.operand_selection = tra.instruction[2:0];
+            s = $sformatf("[%t | MDL] instruction type: %x", $time, this.instruction_type);
+            $display(s);
+            s = $sformatf("[%t | MDL] instruction selection: %x", $time, this.instruction_selection);
+            $display(s);
+            s = $sformatf("[%t | MDL] operand selection: %x", $time, this.operand_selection);
+            $display(s);
 
             if (this.instruction_type == 2'h10)
             begin
