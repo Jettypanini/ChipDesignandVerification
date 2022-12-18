@@ -1,3 +1,4 @@
+`include "transaction.sv"
 `include "tra_probe.sv"
 
 /* A new class is made for the model :) */
