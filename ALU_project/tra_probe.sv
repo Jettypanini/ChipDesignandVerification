@@ -32,26 +32,26 @@ class tra_probe;
   endfunction : show 
 
   function getProbe();
-    this.probe[ 7:0 ] = this.regA;
-    this.probe[15:8 ] = this.regB;
-    this.probe[23:16] = this.regC;
-    this.probe[31:24] = this.regD;
-    this.probe[39:32] = this.regE;
-    this.probe[47:40] = this.regF;
-    this.probe[55:48] = this.regH;
-    this.probe[63:56] = this.regL;
+    this.probe[63:56] = this.regA;
+    this.probe[55:48] = this.regB;
+    this.probe[47:40] = this.regC;
+    this.probe[39:32] = this.regD;
+    this.probe[31:24] = this.regE;
+    this.probe[23:16] = this.regF;
+    this.probe[15:8 ] = this.regH;
+    this.probe[ 7:0 ] = this.regL;
     return this.probe;
   endfunction : getProbe
 
   function setProbe(logic [8*8-1:0] regs);
-    this.regA = regs[ 7:0 ];
-    this.regB = regs[15:8 ];
-    this.regC = regs[23:16];
-    this.regD = regs[31:24];
-    this.regE = regs[39:32];
-    this.regF = regs[47:40];
-    this.regH = regs[55:48];
-    this.regL = regs[63:56];
+    this.regA = regs[63:56];
+    this.regB = regs[55:48];
+    this.regC = regs[47:40];
+    this.regD = regs[39:32];
+    this.regE = regs[31:24];
+    this.regF = regs[23:16];
+    this.regH = regs[15:8 ];
+    this.regL = regs[ 7:0 ];
   endfunction: setProbe
 
 endclass : tra_probe;
