@@ -39,16 +39,6 @@ class gameboyprocessor;
         this.mdl2chk = m2c;
     endfunction : new
 
-    /* A simple to string function to 
-      consult the internals. */
-    task toString();
-        $display("REG A : %02X \t\t REG F : %02X", this.A, this.F);
-        $display("REG B : %02X \t\t REG C : %02X", this.B, this.C);
-        $display("REG D : %02X \t\t REG E : %02X", this.D, this.E);
-        $display("REG H : %02X \t\t REG L : %02X", this.H, this.L);
-    endtask : toString
-
-
     /* Here is the bread-and-butter of the 
        model. Similar to the DUT, an instruction
        can be fed to the model. The model 
@@ -138,8 +128,9 @@ class gameboyprocessor;
             probe.regH = H;
             probe.regL = L;
 
-            s = $sformatf("[%t | MDL] I calculated %x (with %x)", $time, probe.getProbe, tra.instruction);
+            s = $sformatf("[%t | MDL] I calculated with %x", $time, tra.instruction);
             $display(s);
+            probe.show();
 
             this.mdl2chk.put(probe);
         end
