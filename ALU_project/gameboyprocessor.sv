@@ -1,3 +1,5 @@
+`include "transaction.sv"
+
 /* A new class is made for the model :) */
 class gameboyprocessor;
 
@@ -51,7 +53,6 @@ class gameboyprocessor;
        performs the same operation on its 
        internal registers as the DUT. */
     task executeALUInstruction();
-      
         string s;
         transaction tra;
     
