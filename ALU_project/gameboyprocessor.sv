@@ -75,34 +75,58 @@ class gameboyprocessor;
             begin
               case (operand_selection)
                 0 : begin
-                      val_reg = B;
+                      val_reg = this.B;
                     end
                 1 : begin
-                      val_reg = C;
+                      val_reg = this.C;
                     end
                 2 : begin
-                      val_reg = D;
+                      val_reg = this.D;
                     end
                 3 : begin
-                      val_reg = E;
+                      val_reg = this.E;
                     end
                 4 : begin
-                      val_reg = H;
+                      val_reg = this.H;
                     end
                 5 : begin
-                      val_reg = L;
+                      val_reg = this.L;
                     end
                 // Value of HL is ignored.
                 //6 : begin
                 //      val_reg = HL;
                 //    end
                 7 : begin
-                      val_reg = A;
+                      val_reg = this.A;
                     end
               endcase
-              s = $sformatf("[%t | MDL] Value loaded: %x", $time, val_reg);
-              $display(s);
-
+              
+              case(instruction_selection)
+                0:  begin
+                      this.A = this.A + val_reg;
+                    end
+                1:  begin
+                      this.A = this.A + val_reg;
+                    end
+                2:  begin
+                      this.A = this.A - val_reg;
+                    end
+                3:  begin
+                      this.A = this.A - val_reg;
+                    end
+                4:  begin
+                      this.A = this.A & val_reg;
+                    end
+                5:  begin
+                      this.A = this.A ^ val_reg;
+                    end
+                6:  begin
+                      this.A = this.A | val_reg;
+                    end
+                7:  begin
+                      this.A = this.A + val_reg;
+                    end
+              endcase
             end
 
             probe.regA = A;
