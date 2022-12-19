@@ -52,14 +52,14 @@ class gameboyprocessor;
     task executeALUInstruction();
         string s;
         transaction tra;
-        tra_probe probe;
+        tra_probe probe, dummy;
         byte val_reg;
     
         probe = new();
 
         forever
         begin
-          if (this.mdl2chk.num() == 0)
+          if (this.mdl2chk.try_peek(dummy) == 0)
           begin
 					  this.gen2mdl.get(tra);
 					  s = $sformatf("[%t | MDL] received and calculating: %s", $time, tra.toString());
