@@ -144,7 +144,7 @@ class gameboyprocessor;
             $display(s);
             probe.show();
 
-            @(this.mon2chk.num() == 1)
+            @(this.ifc.valid == 1)
             this.mdl2chk.put(probe);
         end
 
