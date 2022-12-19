@@ -59,6 +59,8 @@ class gameboyprocessor;
 
         forever
         begin
+          @(negedge this.ifc.clock);
+          
           if (this.ifc.valid == 1)
           begin
             this.gen2mdl.get(tra);
