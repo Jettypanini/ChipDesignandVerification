@@ -22,7 +22,7 @@ class generator;
     forever
     begin
       tra = new();
-      tra.logical_90percent.constraint_mode(1);
+      tra.log45load45percent.constraint_mode(1);
       void'(tra.randomize()); 
       tra.instruction[7:6] = tra.instruction_type;
       tra.instruction[5:3] = tra.instruction_selection;

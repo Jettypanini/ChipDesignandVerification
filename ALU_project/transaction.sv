@@ -25,8 +25,8 @@ class transaction;
     return $sformatf("Data: %08x", this.data_in);
   endfunction : dataToString  
 
-  constraint logical_90percent {
-    instruction_type dist {2 := 90, [0:1] :/7, 3 := 3};
+  constraint log45load45percent {
+    instruction_type dist {2 := 45, [0:1] :/45, 3 :=10};
   }
 
 endclass : transaction;
