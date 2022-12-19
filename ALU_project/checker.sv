@@ -24,7 +24,7 @@ class verif;
 
     forever 
     begin  
-      if (this.mon2chk.try_get(tra_mon))
+      if (this.mon2chk.get(tra_mon) == 1)
       begin
         this.mdl2chk.get(tra_mdl);
 
