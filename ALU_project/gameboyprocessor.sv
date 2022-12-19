@@ -155,7 +155,7 @@ class gameboyprocessor;
             probe.show();
 
             this.mdl2chk.put(probe);
-            this. mdl2chk.setProbe(this.ifc.probe);
+            probe.setProbe(this.ifc.probe);
           end
         end
 
