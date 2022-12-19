@@ -17,7 +17,7 @@ module Top;
     .reset(i1.reset),
     .clock(clock),
     .instruction(i1.instruction),
-    .data_in(i1.data),
+    .data(i1.data_in),
     .valid(i1.valid),
     .probe(i1.probe)
   );
