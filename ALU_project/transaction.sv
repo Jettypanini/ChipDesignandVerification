@@ -8,17 +8,13 @@ class transaction;
   rand bit [1:0] instruction_type;
   rand bit [2:0] instruction_selection;
   rand bit [2:0] operand_selection;
-  rand bit [1:0] ld_instruction_type;
-  rand bit [2:0] reg_src;
-  rand bit [2:0] reg_dest;
+  rand bit [7:0] data8;
 
   function new();
     this.instruction_type = 2'h0;
     this.instruction_selection = 3'h0;
     this.operand_selection = 3'h0;
-    this.ld_instruction_type = 2'h0;
-    this.reg_src = 3'h0;
-    this.reg_dest = 3'h0;
+    this.data8 = 8'h0;
   endfunction : new
 
   function string toString();

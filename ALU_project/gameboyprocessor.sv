@@ -20,6 +20,8 @@ class gameboyprocessor;
     bit [2:0] instruction_selection;
     bit [2:0] operand_selection;
     
+    bit [7:0] data_in;
+    
     mailbox #(transaction) gen2mdl;
     mailbox #(tra_probe) mdl2chk;
     mailbox #(tra_probe) mon2chk;
@@ -69,12 +71,85 @@ class gameboyprocessor;
             this.instruction_type = tra.instruction[7:6];
             this.instruction_selection = tra.instruction[5:3];
             this.operand_selection = tra.instruction[2:0];
-            s = $sformatf("[%t | MDL] instruction type: %x", $time, this.instruction_type);
-            $display(s);
-            s = $sformatf("[%t | MDL] instruction selection: %x", $time, this.instruction_selection);
-            $display(s);
-            s = $sformatf("[%t | MDL] operand selection: %x", $time, this.operand_selection);
-            $display(s);
+            this.data_in = tra.data_in;
+
+            if (this.instruction_type == 0 & this.operand_selection == 6)
+            begin
+              case(instruction_selection)
+                0:  begin
+                      this.B = this.data_in;
+                    end
+                1:  begin
+                      this.C = this.data_in;
+                    end
+                2:  begin
+                      this.D = this.data_in;
+                    end
+                3:  begin
+                      this.E = this.data_in;
+                    end
+                4:  begin
+                      this.H = this.data_in;
+                    end
+                5:  begin
+                      this.L = this.data_in;
+                    end
+                7:  begin
+                      this.A = this.data_in;                      
+                    end
+              endcase
+            end
+
+            if (this.instruction_type == 1)
+            begin
+              case(operand_selection)
+                0:  begin
+                      val_reg = this.B;
+                    end
+                1:  begin
+                      val_reg = this.C;
+                    end
+                2:  begin
+                      val_reg = this.D;
+                    end
+                3:  begin
+                      val_reg = this.E;
+                    end
+                4:  begin
+                      val_reg = this.H;
+                    end
+                5:  begin
+                      val_reg = this.L;
+                    end
+                7:  begin
+                      val_reg = this.A;                     
+                    end
+              endcase
+
+              case(instruction_selection)
+                0:  begin
+                      this.B = val_reg;
+                    end
+                1:  begin
+                      this.C = val_reg;
+                    end
+                2:  begin
+                      this.D = val_reg;
+                    end
+                3:  begin
+                      this.E = val_reg;
+                    end
+                4:  begin
+                      this.H = val_reg;
+                    end
+                5:  begin
+                      this.L = val_reg;
+                    end
+                7:  begin
+                      this.A = val_reg;                      
+                    end
+              endcase
+            end
 
             if (this.instruction_type == 2)
             begin
