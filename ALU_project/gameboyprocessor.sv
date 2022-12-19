@@ -4,6 +4,8 @@
 /* A new class is made for the model :) */
 class gameboyprocessor;
 
+  virtual ALU_iface ifc;  
+
     /* Eight 8-bit registers */
     byte A;
     byte B;
@@ -26,7 +28,8 @@ class gameboyprocessor;
       because the LOAD instructions are not 
       implemented. Hence, all values are constant 
       (except for those of A and F).*/
-    function new(mailbox #(transaction) g2m, mailbox #(tra_probe) m2c);
+    function new(virtual ALU_iface ifc, mailbox #(transaction) g2m, mailbox #(tra_probe) m2c);
+        this.ifc = ifc;
         this.A = 0;
         this.B = 1;
         this.C = 2;
