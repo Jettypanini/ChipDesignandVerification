@@ -54,7 +54,7 @@ class environment;
       this.mdl.executeALUInstruction();
       this.mon.run();
       this.chk.run();
-      this.scb.run(100);
+      this.scb.run(1000);
       this.gen.run();
     join_any;
     disable fork;
