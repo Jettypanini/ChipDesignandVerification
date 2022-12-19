@@ -56,6 +56,7 @@ class gameboyprocessor;
         begin
 
             this.gen2mdl.get(tra);
+            @(posedge this.ifc.clock);
             s = $sformatf("[%t | MDL] received and calculating: %s", $time, tra.toString());
             $display(s);
             this.instruction_type = tra.instruction[7:6];

@@ -24,21 +24,18 @@ class verif;
 
     forever 
     begin  
-      if (this.mon2chk.get(tra_mon) == 1)
+      this.mon2chk.get(tra_mon);
+      this.mdl2chk.get(tra_mdl);
+
+      tra_mon.show();
+      tra_mdl.show();
+
+      if (tra_mon.getProbe() == tra_mdl.getProbe())
       begin
-        this.mdl2chk.get(tra_mdl);
-
-        tra_mon.show();
-        tra_mdl.show();
-
-        if (tra_mon.getProbe() == tra_mdl.getProbe())
-        begin
-          this.chk2scb.put(bit'(1));
-        end else begin
-          this.chk2scb.put(bit'(0));
-        end
+        this.chk2scb.put(bit'(1));
+      end else begin
+        this.chk2scb.put(bit'(0));
       end
-      
     end
   endtask
   
