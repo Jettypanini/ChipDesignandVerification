@@ -144,8 +144,6 @@ class gameboyprocessor;
 					  s = $sformatf("[%t | MDL] I calculated with %x", $time, tra.instruction);
 					  $display(s);
 					  probe.show();
-		
-					  @(this.ifc.valid == 1)
 					  this.mdl2chk.put(probe);
           end
         end
