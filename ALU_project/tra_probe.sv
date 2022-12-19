@@ -24,7 +24,7 @@ class tra_probe;
     this.regL = 6;
   endfunction : new
 
-  function show();
+  function string show();
         $display("REG A : %02X \t\t REG F : %02X", this.regA, this.regF);
         $display("REG B : %02X \t\t REG C : %02X", this.regB, this.regC);
         $display("REG D : %02X \t\t REG E : %02X", this.regD, this.regE);
