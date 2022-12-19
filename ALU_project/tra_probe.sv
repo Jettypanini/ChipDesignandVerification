@@ -31,18 +31,6 @@ class tra_probe;
         $display("REG H : %02X \t\t REG L : %02X", this.regH, this.regL);
   endfunction : show 
 
-  function getProbe();
-    this.probe[63:56] = this.regA;
-    this.probe[55:48] = this.regB;
-    this.probe[47:40] = this.regC;
-    this.probe[39:32] = this.regD;
-    this.probe[31:24] = this.regE;
-    this.probe[23:16] = this.regF;
-    this.probe[15:8 ] = this.regH;
-    this.probe[ 7:0 ] = this.regL;
-    return this.probe;
-  endfunction : getProbe
-
   function setProbe(logic [8*8-1:0] regs);
     this.regA = regs[63:56];
     this.regB = regs[55:48];

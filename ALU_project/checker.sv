@@ -30,7 +30,7 @@ class verif;
       tra_mon.show();
       tra_mdl.show();
 
-      if (tra_mon.getProbe() == tra_mdl.getProbe())
+      if (tra_mon.regA == tra_mdl.regA & tra_mon.regB == tra_mdl.regB & tra_mon.regC == tra_mdl.regC & tra_mon.regD == tra_mdl.regD & tra_mon.regE == tra_mdl.regE & tra_mon.regF == tra_mdl.regF & tra_mon.regH == tra_mdl.regH & tra_mon.regL == tra_mdl.regL)
       begin
         this.chk2scb.put(bit'(1));
       end else begin
