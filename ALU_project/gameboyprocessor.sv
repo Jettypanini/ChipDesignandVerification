@@ -60,7 +60,7 @@ class gameboyprocessor;
         forever
         begin
           @(negedge this.ifc.clock);
-          
+
           if (this.ifc.valid == 1)
           begin
             this.gen2mdl.get(tra);
@@ -129,7 +129,14 @@ class gameboyprocessor;
                       this.A = this.A | val_reg;
                     end
                 7:  begin
-                      this.A = this.A + val_reg;
+                      if (this.A < val_reg)
+                      begin
+                        this.F[4] = 1'b1; 
+                      end else
+                      begin
+                        this.F[4] = 1'b0; 
+                      end
+                      
                     end
               endcase
             end
