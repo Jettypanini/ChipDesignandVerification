@@ -29,7 +29,7 @@ class tra_probe;
         $display("REG B : %02X \t\t REG C : %02X", this.regB, this.regC);
         $display("REG D : %02X \t\t REG E : %02X", this.regD, this.regE);
         $display("REG H : %02X \t\t REG L : %02X", this.regH, this.regL);
-        return $sformatf("%02X %02X %02X %02X %02X %02X %02X %02X", this.regA, this.regF, this.regB, this.regC, this.regD, this.regE, this.regH, this.regL);
+        return $sformatf("%02X %02X %02X %02X %02X %02X %02X", this.regA, this.regB, this.regC, this.regD, this.regE, this.regH, this.regL); //Ignoring flags
   endfunction : show 
 
   function setProbe(logic [8*8-1:0] regs);
